@@ -1,0 +1,5 @@
+package com.kn.crud.controller;
+
+public class LaptopController {
+
+}

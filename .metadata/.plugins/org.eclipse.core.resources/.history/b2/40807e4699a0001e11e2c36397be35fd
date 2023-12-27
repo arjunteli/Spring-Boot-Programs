@@ -1,0 +1,18 @@
+package com.kn.boot04.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kn.boot04.entity.Student;
+
+@RestController
+@RequestMapping("/crud")
+public class CRUDController {
+
+		@GetMapping("/s-01")
+		public Student getStudent() {
+			Student s1 = new Student(101, 99, "Monisha");
+			return s1;
+		}
+}

@@ -1,0 +1,5 @@
+package com.kn.crud.entity;
+
+public class Laptop {
+
+}

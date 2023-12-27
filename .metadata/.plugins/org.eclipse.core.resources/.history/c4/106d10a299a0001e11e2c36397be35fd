@@ -1,0 +1,29 @@
+package com.kn.boot04.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kn.boot04.entity.Student;
+
+@RestController
+@RequestMapping("/crud")
+public class CRUDController {
+
+		@GetMapping("/s-01")
+		public List<Student> getStudent() {
+			Student s1 = new Student(101, 99, "Monisha");
+			Student s2 = new Student(101, 99, "Monisha");
+			Student s3 = new Student(101, 99, "Monisha");
+			Student s4 = new Student(101, 99, "Monisha");
+			List<Student> list = new ArrayList<>();
+			list.add(s1);
+			list.add(s2);
+			list.add(s3);
+			list.add(s4);
+			return list;
+		}
+}

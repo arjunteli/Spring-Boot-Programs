@@ -1,0 +1,39 @@
+package com.kn.crud.entity;
+
+public class Mobile {
+	private String IMEINumber;
+	private String model;
+	private double cost;
+	public Mobile(String iMEINumber, String model, double cost) {
+		super();
+		this.IMEINumber = iMEINumber;
+		this.model = model;
+		this.cost = cost;
+	}
+	public Mobile() {
+		super();
+	}
+	public String getIMEINumber() {
+		return IMEINumber;
+	}
+	public void setIMEINumber(String iMEINumber) {
+		this.IMEINumber = iMEINumber;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String model) {
+		this.model = model;
+	}
+	public double getCost() {
+		return cost;
+	}
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+	@Override
+	public String toString() {
+		return "Mobile [IMEINumber=" + IMEINumber + ", model=" + model + ", cost=" + cost + "]";
+	}
+	
+}
