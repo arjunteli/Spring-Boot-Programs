@@ -19,6 +19,7 @@ import com.kn.crud.service.BikeService;
 public class BikeController {
 
 	BikeService bikeService;
+	Bike bike1;
 
 	public BikeController(BikeService bikeService) {
 		super();
@@ -29,12 +30,7 @@ public class BikeController {
 	@PostMapping
 	public Bike createBike(@RequestBody Bike bike) throws Exception {
 		return bikeService.createBike(bike);
-//		if (bikeService.readBikeByRegNumber(bike.getRegNumber()) == null) {
-//			return bikeService.createBike(bike);	
-//		}else {
-//			throw new Exception("Bike Already Exists");
-//		}
-		
+
 	}
 
 	// Read bike for specific regNumber
@@ -60,7 +56,7 @@ public class BikeController {
 	// Delete the Bike
 	@DeleteMapping("{regNumber}")
 	public String deleteBikeByRegNumber(@PathVariable String regNumber) {
-		return bikeService.deleteBikeByRegNumber(regNumber) ;
+		return bikeService.deleteBikeByRegNumber(regNumber);
 
 	}
 }

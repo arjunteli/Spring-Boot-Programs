@@ -19,12 +19,16 @@ public class BikeServiceImpl implements BikeService {
 
 	@Override
 	public Bike createBike(Bike bike) {
-		return bikeRepository.save(bike);
+		if (bikeRepository.findById(bike.getRegNumber()).isPresent()) {
+			throw new RuntimeException("ID CONSTRAINT");
+		} else {
+			return bikeRepository.save(bike);
+		}
 	}
 
 	@Override
 	public Bike readBikeByRegNumber(String regNumber) {
-		return	bikeRepository.findById(regNumber).get();
+		return bikeRepository.findById(regNumber).get();
 	}
 
 	@Override
@@ -39,8 +43,8 @@ public class BikeServiceImpl implements BikeService {
 
 	@Override
 	public String deleteBikeByRegNumber(String regNumber) {
-		 bikeRepository.deleteById(regNumber);
-		 return "Bike Deleted";
+		bikeRepository.deleteById(regNumber);
+		return "Bike Deleted";
 	}
 
 }
