@@ -19,6 +19,6 @@ public class StudentController {
 	String getAllStudents(Model model) {
 		model.addAttribute("students", service.getAllStudents());
 
-		return "view-students";
+		return "view-student";
 	}
 }

@@ -1,9 +1,0 @@
-package com.kn.crud.entity;
-
-public class Mobile {
-	private String iMEINumber;
-	private String model;
-	private double cost;
-
-
-}
